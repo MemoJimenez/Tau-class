@@ -1,0 +1,106 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% --------------------------------------------------------
+% Tauenvs
+% LaTeX Package
+% Version 1.1.1 (22/05/2024)
+%
+% Author: 
+% Guillermo Jimenez (memo.notess1@gmail.com)
+%
+% License:
+% Creative Commons CC BY 4.0
+% --------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% --------------------------------------------------------
+%                        WARNING!
+% --------------------------------------------------------
+% Do not remove this package from 'tau.cls' to avoid 
+% compilation problems. This package defines the included 
+% custom environments and colors.
+% --------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------
+% PACKAGE CONFIGURATION
+%----------------------------------------------------------
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tau-class/tauenvs}[2024/05/22]
+
+%----------------------------------------------------------
+% COLORS
+%----------------------------------------------------------
+
+\RequirePackage{xcolor}
+\definecolor{taucolor}{rgb}{0.0,0.2,0.4}        % Blue
+% \definecolor{taucolor}{rgb}{0.12, 0.3, 0.17}   % Green
+% \definecolor{taucolor}{rgb}{0.4, 0.26, 0.13}   % Brown
+
+%----------------------------------------------------------
+% TAUENV-, INFO-, NOTE- ENVIRONMENTS
+%----------------------------------------------------------
+
+% Tauenv
+\newmdenv[
+    backgroundcolor=taucolor!22, 					
+    linecolor=taucolor!22,									
+    linewidth=0.7pt,
+    frametitle=\vskip0pt\bfseries,
+    frametitlerule=false,
+    frametitlefont=\color{taucolor}\bfseries\sffamily,
+    frametitlealignment=\raggedright,
+    innertopmargin=3pt,
+    innerbottommargin=6pt,
+    innerleftmargin=6pt,
+    innerrightmargin=6pt,
+    font=\selectfont,
+    fontcolor=taucolor,									
+    frametitleaboveskip=8pt,
+    skipabove=10pt
+]{tauenv}
+
+%----------------------------------------------------------
+
+% Info
+\newmdenv[
+    backgroundcolor=taucolor!22, 						
+    linecolor=taucolor!22,									
+    linewidth=0.7pt,
+    frametitle=\vskip0pt\bfseries\infolanguage,
+    frametitlerule=false,
+    frametitlefont=\color{taucolor}\bfseries\sffamily,
+    frametitlealignment=\raggedright,
+    innertopmargin=3pt,
+    innerbottommargin=6pt,
+    innerleftmargin=6pt,
+    innerrightmargin=6pt,
+    font=\normalfont,
+    fontcolor=taucolor,									
+    frametitleaboveskip=3pt,
+    skipabove=10pt
+]{info}
+
+%----------------------------------------------------------
+
+% Note
+\newmdenv[
+    backgroundcolor=taucolor!22, 						
+    linecolor=taucolor!22,									
+    linewidth=0.7pt,
+    frametitle=\vskip0pt\bfseries\notelanguage,
+    frametitlerule=false,
+    frametitlefont=\color{taucolor}\bfseries\sffamily,
+    frametitlealignment=\raggedright,
+    innertopmargin=3pt,
+    innerbottommargin=6pt,
+    innerleftmargin=6pt,
+    innerrightmargin=6pt,
+    font=\normalfont,
+    fontcolor=taucolor,									
+    frametitleaboveskip=3pt,
+    skipabove=10pt
+]{note}
+
+%----------------------------------------------------------
+
+\endinput
