@@ -108,7 +108,7 @@ Feel free to reach out — I’d be happy to help, collaborate, or fix the issue
 2. Introducing tauenvs package which includes the defined environments.
 3. The packages that were in tau.sty were moved to the class document (tau.cls).
 
-## Version 2.4.0 (14/05/2024)
+### Version 2.4.0 (14/05/2024)
 
 1. The code of the title and abstract was modified for a better adjustment.
 2. The title is now placed on the left by default, however, it can be changed in title preferences (see appendix for more information).
