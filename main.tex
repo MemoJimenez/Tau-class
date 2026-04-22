@@ -7,7 +7,7 @@
 %   |_|\__,_|\__,_|
 %
 % LaTeX2e Template
-% Version 2.5.0 (01/01/2026)
+% Version 2.6.0 (21/04/2026)
 %
 % Author: 
 % Guillermo Jimenez (memo.notess1@gmail.com)
@@ -33,7 +33,7 @@
 %----------------------------------------------------------
 
 \doctype{Documentation Template}
-\title{Writing a research article or lab report with tau-class}
+\title{Writing a lab report or research article with tau-class}
 
 %----------------------------------------------------------
 
@@ -57,20 +57,18 @@
 
 %----------------------------------------------------------
 
-\footinfo{Tau-class (v.2.5)}
+\footinfo{Tau-class (v.2.6)}
 \theday{\today}
-\organization{\LaTeX\ Template}
+\organization{LaTeX Template}
 \leadauthor{A. One et al.}
 
 %----------------------------------------------------------
-% ABSTRACT AND KEYWORDS
+% Abstract and Keywords
 %----------------------------------------------------------
 
 \begin{abstract}    
     Tau-class was designed for creating professional \LaTeX{} documents, including research articles, technical reports, and academic documentation. It enhances the writing experience through intuitive custom environments, multilingual support, and refined typography. The class integrates Fira Sans for headings and highlighted elements, Fira Mono for code listings, and STIX2 for body text, ensuring consistent styling across tables, figures, equations, listings, and captions. \textit{New or updated features are marked with an asterisk (*)}.
 \end{abstract}
-
-    % Tau ($\tau$) is a specially designed document class for creating professional and well-structured research articles, technical reports, and academic documentation. Tau enhances the writing experience through intuitive custom environments, multilingual support, and refined typography powered by Fira Sans for headings and distinctive elements, Fira Modo for listings, and STIX2 for body text, providing consistent and professional styling for elements such as tables, figures, equations, code listings, and captions. \textit{New/Updated features will show a (*) in their title.}
 
 %----------------------------------------------------------
 
@@ -235,7 +233,7 @@
 		An example using the \inlinecode{tauenv} environment is shown below.
 		
 		\begin{tauenv}[frametitle=Custom Title]
-			This is an example of the custom title environment. To add a title type this command \verb|[frametitle=Custom Title]| next to the beginning of thie environment (as shown in this example).
+			This is an example of the custom title environment. To add a title type this command \verb|[frametitle=Custom Title]| next to the beginning of this environment (as shown in this example).
 		\end{tauenv}
 
         The \inlinecode{info} and \inlinecode{note} are environments which have a predefined title and translate their title to Spanish automatically when this language is defined.
@@ -260,7 +258,7 @@
 	
 		The \inlinecode{minted} package offers customized features for adding codes. In addition, the template is designed to work seamlessly with Fira Code, a monospaced font specially crafted for programming environments.
 
-        If your are using a desktop app as \href{https://www.texstudio.org/}{TeXstudio}, try these steps to make this package work on Windows:
+        If you are using a desktop app as \href{https://www.texstudio.org/}{TeXstudio}, try these steps to make this package work on Windows:
 		
 		\begin{enumerate}
 			\item Install Python — A stable version (e.g., v.3.11)
@@ -312,6 +310,7 @@
 \section{FAQ}
 
     \subsection*{How do I manage my references?}
+    \addcontentsline{toc}{subsection}{How do I manage my references?}
         
         To manage your references, I recommend using the tool \href{https://www.scribbr.es/citar/generador/folders/73QOXYsCwMRu4ifQaN65mx/lists/msTfx7GJjIAOUkufbISnA/}{scribbr}. You can simply enter the URL or create your own citation, and then export it to \LaTeX\ using the options in the three-dot menu.
             
@@ -324,16 +323,19 @@
         If you have any further questions, you can refer to the following page — \href{https://es.overleaf.com/learn/latex/Bibliography_management_with_biblatex}{Bibliography management with biblatex}.
         
     \subsection*{What should I do with the example files?}
+    \addcontentsline{toc}{subsection}{What should I do with the example files?}
 
         The template includes sample content — such as an example figure, bibliography entries, and the \inlinecode{example.py} script — to demonstrate how the layout and features work. Once you start customizing the document for your own use, feel free to delete all example files and entries you don’t need.
 
     \subsection*{How do I place equations easily?}
+    \addcontentsline{toc}{subsection}{How do I place equations easily?}
 
         For equations, we have two options: inline or on its own line. For inline equations, simply place a dollar sign (\$) at the beginning and end of the equation. However, if you want the equation to be displayed on its own line, you need to use the equation environment.
         
         If you find it challenging to write formulas directly in \LaTeX, you can use text editors like Word. In the equations menu, you can select \LaTeX\ in the conversion section and copy and paste the equation you wrote into one of these two environments.
 
     \subsection*{How do I change the paper size?}
+    \addcontentsline{toc}{subsection}{How do I change the paper size?}
 
         By default, this class was adapted for a4paper and test it with letterpaper. The following paper sizes are available in \LaTeX:
 
@@ -347,6 +349,7 @@
        \end{itemize}
 
 \section*{Contact me}
+\addcontentsline{toc}{section}{Contact me}
     
     Have questions, suggestions, or an idea for a new feature? Found a bug or working on a project you’d like to invite me to?  
     
@@ -363,6 +366,7 @@
     \end{center}
 
 \section*{Github Repository}
+\addcontentsline{toc}{section}{Github Repository}
 
     Visit the repository to access the source code, track ongoing development, report issues, and stay up to date with the latest changes.
 
@@ -374,17 +378,19 @@
     \end{center}
 
 \section*{Supporting}
+\addcontentsline{toc}{section}{Supporting}
 
     Did you like this class document? Check out rho-class, made for complex research articles.
 
     \begin{center}
         \setlength{\tabcolsep}{3pt}
         \begin{tabular}{cl}
-             \faLink &  \href{https://es.overleaf.com/latex/templates/rho-class-academic-article-template/bpgjxjjqhtfy}{https://es.overleaf.com/latex/templates/rho-class}\\
+             \faLink &  \href{https://www.overleaf.com/latex/templates/rho-class-research-article-template/bpgjxjjqhtfy}{https://es.overleaf.com/latex/templates/rho-class}\\
         \end{tabular}
     \end{center}
     
     \subsection*{Any contributions are welcome!}
+    \addcontentsline{toc}{subsection}{Any contributions are welcome!}
     
         Coffee keeps me awake and helps me create better \LaTeX\ templates. If you wish to support my work, you can do so through PayPal: 
 

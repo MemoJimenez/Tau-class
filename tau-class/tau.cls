@@ -7,7 +7,7 @@
 %   |_|\__,_|\__,_|      \___|_|\__,_|___/___/
 %
 % LaTeX2e Class
-% Version 2.5.0 (01/01/2026)
+% Version 2.6.0 (21/04/2026)
 %
 % Author: 
 % Guillermo Jimenez (memo.notess1@gmail.com)
@@ -33,7 +33,7 @@
 %----------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{tau-class/tau}[01/01/2026 Tau LaTeX2e class]
+\ProvidesClass{tau-class/tau}[21/04/2026 Tau LaTeX2e class]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{extarticle}}
 \ProcessOptions\relax
 \LoadClass{extarticle}
@@ -159,11 +159,11 @@
 \RequirePackage{bookmark}
 
 % New commands for figure-, table-, code- cross references
-\newcommand{\figref}[1]{\hyperref[#1]{\figlabel~\ref*{#1}}}
-\newcommand{\figsref}[1]{\hyperref[#1]{\figslabel~\ref*{#1}}}
-\newcommand{\tabref}[1]{\hyperref[#1]{\tablabel~\ref*{#1}}}
-\newcommand{\coderef}[1]{\hyperref[#1]{\captionlabelcode~\ref*{#1}}}
-\newcommand{\equref}[1]{\hyperref[#1]{\eqlabel~\ref*{#1}}}
+\newcommand{\figref}[1]{\hyperref[#1]{\figlabel\nobreakspace\ref*{#1}}}
+\newcommand{\figsref}[1]{\hyperref[#1]{\figslabel\nobreakspace\ref*{#1}}}
+\newcommand{\tabref}[1]{\hyperref[#1]{\tablabel\nobreakspace\ref*{#1}}}
+\newcommand{\coderef}[1]{\hyperref[#1]{\captionlabelcode\nobreakspace\ref*{#1}}}
+\newcommand{\equref}[1]{\hyperref[#1]{\eqlabel\nobreakspace\ref*{#1}}}
 
 %----------------------------------------------------------
 % Items
@@ -236,7 +236,7 @@
 
 \RequirePackage{lettrine}
 \newcommand{\dropcapfont}{\color{taucolor}\bfseries}
-\newcommand{\taustart}[1]{\lettrine[lines=2,lraise=0,findent=2pt, nindent=0em]{{\dropcapfont{#1}}}{}}
+\newcommand{\taustart}[1]{\lettrine[lines=2,lraise=0,findent=2pt, nindent=0em]{{\fontsize{26.5}{24}\dropcapfont{#1}}}{}}
 
 %----------------------------------------------------------
 % Abstract style
@@ -312,6 +312,9 @@
 \newcommand{\docinfo}[1]{\def\@docinfo{#1}}
 \let\@docinfo\@empty
 
+\let\oldthanks\thanks
+\renewcommand{\thanks}[1]{\oldthanks{\sffamily #1}}
+
 \appto{\maketitle}{%
   \tauabstract
   %
@@ -328,6 +331,7 @@
       \parindent=0em
       \hangindent=0pt
       \hangafter=0
+      \sffamily
       \@docinfo\par
     }%
   \fi
@@ -342,7 +346,8 @@
 \setlength{\affilsep}{10pt}
 \renewcommand\Authfont{\normalfont\sffamily\fontsize{9}{11}}
 \renewcommand\Affilfont{\sffamily\itshape\fontsize{7.5}{9}\selectfont}
-% \renewcommand\AB@affilnote[1]{\textsuperscript{\sffamily#1}}
+\renewcommand\AB@affilnote[1]{\textsuperscript{\sffamily#1}}
+\renewcommand\AB@authnote[1]{\textsuperscript{\sffamily#1}}
 % \renewcommand\AB@affilsepx{; \protect\Affilfont}
 
 \renewcommand\Authand{\ignorespaces\andlanguage}
